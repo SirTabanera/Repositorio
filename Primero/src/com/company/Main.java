@@ -39,7 +39,7 @@ public class Main {
                          System.out.println("ingrese el segundo valor: ");
                          n2 = entrada.nextInt();
                          resultados = operaciones.restar(n1, n2);
-                         System.out.println("La suma es: "+ resultados);
+                         System.out.println("La resta es: "+ resultados);
                          break;
                      case 3:
                          System.out.println("ingrese el primer valor: ");
@@ -47,7 +47,7 @@ public class Main {
                          System.out.println("ingrese el segundo valor: ");
                          n2 = entrada.nextInt();
                          resultados = operaciones.multiplicar(n1, n2);
-                         System.out.println("La suma es: "+ resultados);
+                         System.out.println("La multiplicacion es: "+ resultados);
                          break;
                      case 4:
                          System.out.println("ingrese el primer valor: ");
@@ -55,7 +55,7 @@ public class Main {
                          System.out.println("ingrese el segundo valor: ");
                          n2 = entrada.nextInt();
                          resultados = operaciones.dividir(n1, n2);
-                         System.out.println("La suma es: "+ resultados);
+                         System.out.println("La division es: "+ resultados);
                          break;
                  }
              }

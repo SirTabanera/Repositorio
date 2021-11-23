@@ -1,6 +1,5 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-
 # CodeStream ignored files
-/Segundo\.idea
+/../../Proyectos\.idea/codestream.xml

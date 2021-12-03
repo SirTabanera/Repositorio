@@ -40,6 +40,22 @@ public class MainTest  {
         jugadores.put("Capdevila", new JugadorSeleccion(11, "Capdevila", "Lateral Izquierdo"));
         Assert.assertNotNull(jugadores);
         Assert.assertTrue("Casillas", jugadores.containsKey("Casillas"));
+        Assert.assertFalse(jugadores.containsKey("Pepe"));
+
+    }
+
+    @Test
+    public void Test () {
+        Map <String, JugadorSeleccion> jugadores = new TreeMap<>();
+        Assert.assertNotNull(jugadores);
+        Throwable exception = Assert.assertThrows(
+                IllegalArgumentException.class,
+                () -> {
+                    throw new IllegalArgumentException("Exception message");
+                }
+        );
+        Assert.assertEquals("Exception message", exception.getMessage());
+
 
     }
 }

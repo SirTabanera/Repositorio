@@ -4,7 +4,8 @@ class Producto {
     private int id; //Identificador de producto
     private String nombre;
     private String familia;
-    private int precio;
+    private double precio;
+    private int cantidad;
 
 
 
@@ -12,11 +13,12 @@ class Producto {
 
 
 
-    public Producto(int id, String nombre, String familia, int precio, int pos) {
+    public Producto(int id, String nombre, String familia, double precio, int cantidad) {
         this.id = id;
         this.nombre = nombre;
         this.familia = familia;
         this.precio = precio;
+        this.cantidad = cantidad;
     }
     public int getId() {
         return id;
@@ -42,7 +44,7 @@ class Producto {
         this.familia = familia;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -56,8 +58,18 @@ class Producto {
     public void setPos(int pos) {
         this.pos = pos;
     }
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
 
 
+
+
+@Override
     public String toString() {
         return "Producto{" +
                 "id=" + id +
@@ -65,6 +77,7 @@ class Producto {
                 ", familia='" + familia + '\'' +
                 ", precio=" + precio +
                 ", posicion='" + pos + '\'' +
+                ", cantidad='" + cantidad + '\'' +
                 '}';
     }
 

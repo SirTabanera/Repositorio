@@ -1,5 +1,6 @@
 package com.java.main;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -58,12 +59,14 @@ public class Carrito_compra {
     // Mostrar el precio del carrito
     public double PrecioCarrito(){
         double precioTotal = 0.0;
+
         Iterator it= mapa.keySet().iterator();
         while(it.hasNext()){
             int p = (Integer) it.next();
             Producto producto = mapa.get(p);
            precioTotal+=producto.getPrecio()*producto.getCantidad();
-        }return precioTotal;
+
+        } return precioTotal;
     }
         // Vaciar el carrito
     public void limpiarCarrito(){mapa.clear();}

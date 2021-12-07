@@ -75,7 +75,15 @@ public class Main {
                         carrito.anadirProducto(p3);
                         System.out.println("Agregado con éxito !!");
                         break;
-                    } else if (entrada.equals(p5.getNombre())) {
+                    } else if (entrada.equals(p4.getNombre())) {
+                        carrito.anadirProducto(p4);
+                        System.out.println("Agregado con éxito !!");
+                        break;
+                    }else if (entrada.equals(p5.getNombre())) {
+                        carrito.anadirProducto(p5);
+                        System.out.println("Agregado con éxito !!");
+                        break;
+                    } else if (entrada.equals(p6.getNombre())) {
                         carrito.anadirProducto(p6);
                         System.out.println("Agregado con éxito !!");
                         break;
@@ -87,7 +95,7 @@ public class Main {
                         carrito.anadirProducto(p8);
                         System.out.println("Agregado con éxito !!");
                         break;
-                    }   else {
+                    }  else {
                         System.out.println("Error de entrada");
                         break;
                     }

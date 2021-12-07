@@ -1,6 +1,6 @@
 package com.java.main;
 
-class Producto {
+public class Producto {
     private int id; //Identificador de producto
     private String nombre;
     private String familia;
@@ -11,7 +11,7 @@ class Producto {
 
     private int pos; //Posicion en el carrito
 
-
+    public Producto(){}
 
     public Producto(int id, String nombre, String familia, double precio, int cantidad) {
         this.id = id;

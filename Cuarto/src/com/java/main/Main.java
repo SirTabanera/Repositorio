@@ -6,13 +6,13 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
-    public HashMap<String,Carrito_compra> items= new HashMap<>();
+    //public HashMap<String,Carrito_compra> items= new HashMap<>();
     public static void main(String[] args) {
         Producto p1 = new Producto(1, "ordenador", "informatica", 1500.95, 1);
-        Producto p2 = new Producto(2, "bicileta", "deportes", 4500.00, 1);
+        Producto p2 = new Producto(2, "bicicleta", "deportes", 4500.00, 1);
         Producto p3 = new Producto(3, "zapatillas", "deportes", 50.95, 1);
         Producto p4 = new Producto(4, "auriculares", "audio", 100.80, 1);
-        Producto p5 = new Producto(5, "televison", "audio/video", 1499.99, 1);
+        Producto p5 = new Producto(5, "television", "audio/video", 1499.99, 1);
         Producto p6 = new Producto(6, "videojuego", "consolas", 70.99, 1);
         Producto p7 = new Producto(7, "Cable Hdmi", "tecnologia", 12.35, 1);
         Producto p8 = new Producto(8, "usb", "informatica", 9.99, 1);

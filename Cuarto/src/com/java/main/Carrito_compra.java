@@ -37,6 +37,9 @@ public class Carrito_compra {
         if(mapa.containsKey(p.getId())){
             int num=p.getPos();
             p.setCantidad(num-1);
+            if (p.getCantidad()<=0){
+                mapa.remove(p.getId());
+            }
         }
 
     }
@@ -55,7 +58,6 @@ public class Carrito_compra {
     // Mostrar el precio del carrito
     public double PrecioCarrito(){
         double precioTotal = 0.0;
-        ArrayList<Producto> precio=new ArrayList<>();
         Iterator it= mapa.keySet().iterator();
         while(it.hasNext()){
             int p = (Integer) it.next();

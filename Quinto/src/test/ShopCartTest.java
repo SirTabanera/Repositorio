@@ -1,18 +1,18 @@
 package test;
 
+
 import main.Product;
-import main.ShopCart;
+
 import java.util.*;
 import org.junit.*;
 
 public class ShopCartTest {
-    List<Product>list = new ArrayList<>();
+    ArrayList<Product>list = new ArrayList<>();
     @Test
     public void addProductTest(){
         Product product = new Product();
         if (list.contains(product)){
-            int a = product.getAmount();
-            product.setAmount(a+1);
+          product.setAmount(product.getAmount()+1);
         }
         else{
             list.add(product);
@@ -26,8 +26,7 @@ public class ShopCartTest {
         product.setAmount(1);
         list.add(product);
         if (list.contains(product)){
-            int a=product.getAmount();
-            product.setAmount(a-1);
+            product.setAmount(product.getAmount()-1);
             if (product.getAmount()<=0){
                 list.remove(product);
             }
@@ -42,7 +41,7 @@ public class ShopCartTest {
         product.setPrice(150);
         product.setAmount(20);
 
-        List<Product> list  = new ArrayList<>();
+
         list.add(product);
 
         double totalAmount = 0.0;
@@ -57,7 +56,6 @@ public class ShopCartTest {
     @Test
     public void clearShopCartTest(){
         Product product = new Product();
-        List<Product> list  = new ArrayList<>();
         list.add(product);
         list.clear();
         Assert.assertTrue(list.isEmpty());

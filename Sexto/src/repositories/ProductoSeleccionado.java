@@ -6,9 +6,16 @@ public class ProductoSeleccionado extends Producto {
     Integer cantidad;
     double price =0.0;
 
+
+
     public ProductoSeleccionado(Integer id, String name, Integer cantidad, double price, Familia familia){
-        super();
+        super(id, name);
+        this.cantidad= cantidad;
+        this.price=price;
     }
+    public ProductoSeleccionado(){}
+
+
     public Integer getCantidad() {
         return cantidad;
     }
@@ -24,5 +31,11 @@ public class ProductoSeleccionado extends Producto {
     public void setPrice(double price) {
         this.price = price;
     }
-
+    @Override
+    public String toString() {
+        return "ProductoSeleccionado{" +
+                "cantidad=" + cantidad +
+                ", price=" + price +
+                "} " + super.toString();
+    }
 }

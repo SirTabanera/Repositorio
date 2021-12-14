@@ -1,9 +1,19 @@
 package services;
 
+
 import repositories.ProductoSeleccionado;
-import services.CestaServiceImpl.*;
+import services.CestaServiceImpl;
+import java.util.ArrayList;
+
+
 
 public class CompraServiceImpl implements CompraService {
+
+    private ProductoSeleccionado product;
+
+    public CompraServiceImpl(ProductoSeleccionado product) {
+        this.product = product;
+    }
 
     @Override
     public void CalculatePrice() {

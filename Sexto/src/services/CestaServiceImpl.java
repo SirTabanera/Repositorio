@@ -3,15 +3,19 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 import repositories.ProductoSeleccionado;
-import Enum.Familia;
 
 public class CestaServiceImpl implements CestaService {
 
-    ArrayList cesta = new ArrayList<>();
-    ArrayList compra = new ArrayList<>();
 
-    ProductoSeleccionado product = new ProductoSeleccionado(1,"ordenador",1,1500.99, Familia.INFORMATICA);
-    @Override
+    ProductoSeleccionado product = new ProductoSeleccionado();
+    ArrayList cesta = new ArrayList<>();
+    /*static*/ ArrayList compra = new ArrayList<>();
+
+    public CestaServiceImpl(ProductoSeleccionado product) {
+        this.product = product;
+    }
+
+
     public void addProduct() {
         if(cesta.contains(product)){
             product.setCantidad(product.getCantidad()+1);

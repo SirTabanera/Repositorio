@@ -7,15 +7,10 @@ import repositories.ProductoSeleccionado;
 public class CestaServiceImpl implements CestaService {
 
 
-    ProductoSeleccionado product = new ProductoSeleccionado();
-    ArrayList cesta = new ArrayList<>();
-    /*static*/ ArrayList compra = new ArrayList<>();
-
-    public CestaServiceImpl(ProductoSeleccionado product) {
-        this.product = product;
-    }
 
 
+
+    @Override
     public void addProduct() {
         if(cesta.contains(product)){
             product.setCantidad(product.getCantidad()+1);
@@ -36,17 +31,8 @@ public class CestaServiceImpl implements CestaService {
 
     @Override
     public void clearCesta() {
-        List list = new ArrayList<>();
+        cesta = new ArrayList<>();
 
     }
-
-    @Override
-    public void validateCesta() {
-        for (int i =0; i<cesta.size();i++){
-            compra.add(product);
-        }
-
-    }
-
 
 }

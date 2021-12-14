@@ -5,9 +5,12 @@ public class Producto {
 
     private Integer id;
     private String name;
-    public Enum<Familia> familia;
 
+    public Producto(Integer id, String name) {}
 
+    public Producto() {
+
+    }
 
     public Integer getId() {
         return id;

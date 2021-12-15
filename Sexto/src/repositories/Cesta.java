@@ -7,7 +7,7 @@ import java.util.List;
 public class Cesta {
 private List<ProductoSeleccionado> cesta= new ArrayList<>();
 
-    public void crearCesta(List cesta, ProductoSeleccionado productoSeleccionado){
+    public void crearCesta(List<ProductoSeleccionado> cesta, ProductoSeleccionado productoSeleccionado){
     this.cesta=cesta;
     cesta.add(productoSeleccionado);
     }

@@ -1,29 +1,28 @@
 package repositories;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Compra {
 
-    private List<Cesta> compra = new ArrayList<Cesta>();
+    private Cesta cesta = new Cesta();
+    private Usuarios usuario = new Usuarios();
 
-
-    public void crearCompra(List compra, Usuarios usuarios){
-        this.compra=compra;
-        usuarios.Usuario(usuarios.getEmail(), usuarios.getNombre());
-    }
-    public List<Cesta> getCompra() {
-        return compra;
+    public void crearCompra(Cesta cesta, Usuarios usuarios){
+        this.cesta=cesta;
+        this.usuario=usuarios;
     }
 
-    public void setCompra(List<Cesta> compra) {
-        this.compra = compra;
+    public Cesta getCesta() {
+        return cesta;
+    }
+
+    public void setCesta(Cesta cesta) {
+        this.cesta = cesta;
     }
 
     @Override
     public String toString() {
         return "Compra{" +
-                "compra=" + compra +
+                "cesta=" + cesta +
+                ", usuario=" + usuario +
                 '}';
     }
 }

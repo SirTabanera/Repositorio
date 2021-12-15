@@ -6,11 +6,16 @@ public class Usuarios {
     String email;
     String nombre;
 
-    public void Usuario(String email, String nombre){
+    public Usuarios() {
+
+    }
+
+
+    public Usuarios(String email, String nombre){
         this.email=email;
         this.nombre=nombre;
+
     }
-    public void Usuario(){}
 
     public String getEmail() {
         return email;

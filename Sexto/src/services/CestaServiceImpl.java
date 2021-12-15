@@ -8,12 +8,11 @@ import java.util.List;
 
 
 public class CestaServiceImpl implements CestaService {
-    List<ProductoSeleccionado> productoSeleccionados= new ArrayList<>();
+    List<ProductoSeleccionado> listaProductoSeleccionados= new ArrayList<>();
 
 
     @Override
     public void addProduct() {
-
     }
 
     @Override

@@ -16,9 +16,6 @@ public class ProductoSeleccionado extends Producto {
     }
     public ProductoSeleccionado(){}
 
-
-
-
     public Integer getCantidad() {
         return cantidad;
     }

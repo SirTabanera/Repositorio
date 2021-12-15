@@ -1,10 +1,7 @@
 package services;
 
-import org.testng.annotations.Test;
+import org.junit.*;
 
 public class CestaServiceTest {
-    @Test
-    public void addProductTest(){
-        CestaServiceImpl.addProduct();
-    }
+
 }

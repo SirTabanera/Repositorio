@@ -1,7 +1,6 @@
 package repositories;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.*;
 import Enum.Familia;
 
 public class ProductoSeleccionadoTest {

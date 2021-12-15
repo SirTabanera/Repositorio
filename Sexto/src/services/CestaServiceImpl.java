@@ -1,17 +1,19 @@
 package services;
 
+import repositories.Cesta;
+import repositories.ProductoSeleccionado;
+
 import java.util.ArrayList;
 import java.util.List;
-import repositories.ProductoSeleccionado;
+
 
 public class CestaServiceImpl implements CestaService {
 
-
-
-
-
+    ProductoSeleccionado product;
+    List<ProductoSeleccionado> cesta = new ArrayList<>();
     @Override
     public void addProduct() {
+
         if(cesta.contains(product)){
             product.setCantidad(product.getCantidad()+1);
         }else{

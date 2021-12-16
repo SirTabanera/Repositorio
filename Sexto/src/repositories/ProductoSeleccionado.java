@@ -4,8 +4,8 @@ import Enum.Familia;
 import java.lang.*;
 
 public class ProductoSeleccionado extends Producto {
-    Integer cantidad;
-    double price =0.0;
+    private Integer cantidad;
+    private double price =0.0;
 
 
 
@@ -14,7 +14,10 @@ public class ProductoSeleccionado extends Producto {
         this.cantidad= cantidad;
         this.price=price;
     }
-    public ProductoSeleccionado(){}
+    public ProductoSeleccionado(Producto producto){
+        super(producto.getId(), producto.getName());
+    }
+    public ProductoSeleccionado (){}
 
     public Integer getCantidad() {
         return cantidad;
@@ -38,4 +41,5 @@ public class ProductoSeleccionado extends Producto {
                 ", price=" + price +
                 "} " + super.toString();
     }
+
 }

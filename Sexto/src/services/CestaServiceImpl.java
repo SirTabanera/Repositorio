@@ -15,18 +15,11 @@ public class CestaServiceImpl implements CestaService {
     @Override
     public void addProduct() {
 
-        cesta.setCesta(listaProductoSeleccionados);
     }
 
     @Override
     public void removeProduct() {
-        if (cesta.getCesta()==listaProductoSeleccionados){
-            cesta=new Cesta();
-        }
     }
 
-    @Override
-    public void clearCesta() {
-    }
 
 }

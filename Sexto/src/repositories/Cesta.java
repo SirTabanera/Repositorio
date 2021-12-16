@@ -8,6 +8,7 @@ import java.util.List;
 public class Cesta {
 private List<ProductoSeleccionado> cesta;
 
+
     /*public void crearCesta(List<ProductoSeleccionado> cesta, ProductoSeleccionado productoSeleccionado){
     this.cesta=cesta;
     cesta.add(productoSeleccionado);
@@ -33,15 +34,20 @@ private List<ProductoSeleccionado> cesta;
     public Cesta(ProductoSeleccionado producto){
         this.cesta= Arrays.asList(producto);
     }
-    public void addProduct(ProductoSeleccionado producto){
-        cesta.add(producto);
-        if (cesta.contains(producto)){
-            producto.setCantidad(producto.cantidad++);
+
+    public void addProduct(Producto p ) {
+        for(ProductoSeleccionado ps: this.getCesta())
+        { if (ps.getId() == p.getId()){
+            ps.setCantidad(ps.getCantidad()+1);
         }
+        else{
+        cesta.add(new ProductoSeleccionado(p));
+        }
+    }
     }
     public void removeProduct(ProductoSeleccionado producto){
         if (cesta.contains(producto)){
-            producto.setCantidad(producto.cantidad--);
+            producto.setCantidad(producto.getCantidad()-1);
         }if (producto.getCantidad()<=0){
             cesta.remove(producto);
         }
